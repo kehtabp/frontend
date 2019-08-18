@@ -1,8 +1,8 @@
 sudo: required
 services:
   - docker
-before install:
+before_install:
   - docker build -t kehtabp/frontend -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true kehtabp/frontend npm run test
+  - docker run -es CI=true kehtabp/frontend npm run test
