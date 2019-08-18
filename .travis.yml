@@ -3,3 +3,6 @@ services:
   - docker
 before install:
   - docker build -t kehtabp/frontend -f Dockerfile.dev .
+
+script:
+  - docker run kehtabp/frontend npm run test  -- --coverage
