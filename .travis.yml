@@ -5,4 +5,4 @@ before_install:
   - docker build -t kehtabp/frontend -f Dockerfile.dev .
 
 script:
-  - docker run -es CI=true kehtabp/frontend npm run test
+  - docker run -e CI=true kehtabp/frontend npm run test
