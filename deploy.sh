@@ -1,0 +1,1 @@
+ export DOCKER_HOST="ssh://root@scale.kewko.net" 
