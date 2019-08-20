@@ -2,6 +2,8 @@ sudo: required
 services:
 - docker
 before_install:
+- openssl aes-256-cbc -K $encrypted_f2356db65f28_key -iv $encrypted_f2356db65f28_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
 - openssl aes-256-cbc -K $encrypted_fbd1383816dc_key -iv $encrypted_fbd1383816dc_iv
   -in deploy_rsa.enc -out deploy_rsa -d
 - docker build -t kehtabp/frontend -f Dockerfile.dev .
